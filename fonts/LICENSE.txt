@@ -1,0 +1,9 @@
+Fonts used on this site, hosted here so that visiting the site contacts no third party:
+
+- Schibsted Grotesk, copyright The Schibsted Grotesk Project Authors
+- Source Serif 4, copyright Adobe
+- IBM Plex Mono, copyright IBM Corp.
+
+All three are licensed under the SIL Open Font License, Version 1.1:
+https://openfontlicense.org/open-font-license-official-text/
+The files are the web versions served by Google Fonts (https://fonts.google.com).
