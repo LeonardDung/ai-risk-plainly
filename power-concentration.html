@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI-enabled power concentration · AI Risk, Plainly</title>
+<link rel="canonical" href="https://leonarddung.github.io/ai-risk-plainly/power-concentration.html">
+<meta name="description" content="If AI becomes as powerful as many researchers expect, whoever controls it could gain more power than anyone in history, and might never have to give it back.">
+
+<link rel="alternate" hreflang="en" href="https://leonarddung.github.io/ai-risk-plainly/power-concentration.html">
+<link rel="alternate" hreflang="de" href="https://leonarddung.github.io/ai-risk-plainly/de-power-concentration.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI Risk, Plainly">
+<meta property="og:title" content="AI-enabled power concentration">
+<meta property="og:description" content="If AI becomes as powerful as many researchers expect, whoever controls it could gain more power than anyone in history, and might never have to give it back.">
+<meta property="og:url" content="https://leonarddung.github.io/ai-risk-plainly/power-concentration.html">
+<meta property="og:image" content="https://leonarddung.github.io/ai-risk-plainly/og/power-concentration.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI-enabled power concentration · AI Risk, Plainly">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI-enabled power concentration">
+<meta name="twitter:description" content="If AI becomes as powerful as many researchers expect, whoever controls it could gain more power than anyone in history, and might never have to give it back.">
+<meta name="twitter:image" content="https://leonarddung.github.io/ai-risk-plainly/og/power-concentration.png">
+<meta name="twitter:image:alt" content="AI-enabled power concentration · AI Risk, Plainly">
+<style>/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin-ext-60d1ee.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin-8d0aea.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-italic-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+:root {
+  /* Layout: a reference work. One reading column of about 66 characters, with a margin rail
+     for the contents; the evidence section sits on a quiet tinted panel. */
+  --paper: #F3F5F5;
+  --raised: #FFFFFF;
+  --ink: #161A1D;
+  --ink-soft: #4C565B;
+  --rule: #C7D0D3;
+  --accent: #0A5C65;
+  --accent-strong: #063E44;
+  --dated: #E3EAEC;
+  --tag: #F1C23C;
+  --tag-ink: #2A2105;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-meta: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0F1315; --raised: #161C1F; --ink: #E3E8E9; --ink-soft: #9BA7AB; --rule: #2B3539;
+    --accent: #66C7C6; --accent-strong: #A3E2DF; --dated: #162024; --tag: #D6AE3A; --tag-ink: #1B1503;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0F1315; --raised: #161C1F; --ink: #E3E8E9; --ink-soft: #9BA7AB; --rule: #2B3539;
+  --accent: #66C7C6; --accent-strong: #A3E2DF; --dated: #162024; --tag: #D6AE3A; --tag-ink: #1B1503;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: 1.125rem; line-height: 1.62;
+  font-optical-sizing: auto; text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { color: var(--accent-strong); text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 72rem; margin-inline: auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: var(--gutter-l); top: 0.5rem; background: var(--raised); padding: 0.4rem 0.7rem; z-index: 2; }
+
+/* bands */
+.banner { background: var(--tag); color: var(--tag-ink); font-family: var(--font-meta); font-size: 0.75rem; letter-spacing: 0.04em; }
+.banner .wrap { padding-block: 0.4rem; }
+.site-header { border-bottom: 1px solid var(--rule); }
+.site-header .wrap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1rem; }
+.brand { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+.brand em { font-family: var(--font-body); font-weight: 400; color: var(--accent); }
+.brand:hover { color: var(--ink); }
+.nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; font-family: var(--font-display); font-size: 0.95rem; font-weight: 500; }
+.nav a { color: var(--ink-soft); text-decoration: none; }
+.header-right { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.5rem; }
+.langs { display: flex; gap: 0.3rem; font-family: var(--font-meta); font-size: 0.74rem; letter-spacing: 0.04em; }
+.langs a { color: var(--ink-soft); text-decoration: none; padding: 0.1rem 0.45rem; border: 1px solid var(--rule); border-radius: 3px; }
+.langs a:hover { color: var(--ink); border-color: var(--ink-soft); }
+.langs a[aria-current] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.35em; }
+.site-footer { border-top: 1px solid var(--rule); margin-top: 5rem; font-family: var(--font-display); font-size: 0.9rem; color: var(--ink-soft); }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; padding-block: 2rem 3rem; }
+.site-footer a { color: var(--ink-soft); }
+
+/* type */
+h1, h2, h3 { font-family: var(--font-display); color: var(--ink); text-wrap: balance; margin: 0; }
+h1 { font-weight: 800; font-size: clamp(2.2rem, 5.5vw, 3.4rem); line-height: 1.04; letter-spacing: -0.025em; }
+h2 { font-weight: 700; font-size: 1.45rem; line-height: 1.2; letter-spacing: -0.01em; margin-top: 2.6rem; margin-bottom: 0.6rem; }
+p { margin: 0 0 1.05em; }
+.label { font-family: var(--font-meta); font-size: 0.74rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.lede { font-size: 1.3rem; line-height: 1.45; color: var(--ink-soft); margin-top: 1rem; max-width: 38rem; }
+
+/* home */
+.masthead { padding-block: clamp(2.5rem, 7vw, 5rem) 2.5rem; }
+.wordmark { font-size: clamp(2.9rem, 9vw, 6rem); line-height: 0.92; letter-spacing: -0.035em; }
+.wordmark em { display: block; font-family: var(--font-body); font-weight: 400; color: var(--accent); letter-spacing: -0.02em; }
+.anatomy-wrap { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+.anatomy-label { font-size: 1.45rem; letter-spacing: 0.06em; }
+.anatomy { list-style: none; counter-reset: part; display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem 2rem; margin: 0.8rem 0 0; padding: 0; }
+.anatomy li { counter-increment: part; position: relative; padding-left: 2.1rem; min-width: 0; font-size: 0.98rem; line-height: 1.45; color: var(--ink-soft); }
+.anatomy li::before {
+  content: counter(part); position: absolute; left: 0; top: 0.05rem; width: 1.45rem; height: 1.45rem;
+  display: grid; place-items: center; border: 1px solid var(--rule); border-radius: 50%;
+  font-family: var(--font-meta); font-size: 0.72rem; color: var(--ink-soft);
+}
+.anatomy b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--ink); }
+.index { padding-top: 1rem; }
+.index-head { border-top: 3px solid var(--ink); padding-top: 1.1rem; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.4rem 2rem; }
+.index-head h2 { margin: 0; font-size: clamp(1.9rem, 4.5vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; }
+.index-head p { margin: 0; font-family: var(--font-display); font-size: 1rem; color: var(--ink-soft); }
+.theme { margin-top: 2.6rem; }
+.theme h3 { display: flex; align-items: center; gap: 0.8rem; font-size: 1.75rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.15; margin-bottom: 1.1rem; }
+.theme h3::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+.cards li { min-width: 0; }
+.card {
+  display: grid; align-content: start; gap: 0.5rem; height: 100%; padding: 1.15rem 1.25rem 1.05rem;
+  background: var(--raised); border: 1px solid var(--rule); border-radius: 3px;
+  color: var(--ink); text-decoration: none;
+}
+.card:hover { border-color: var(--accent); color: var(--ink); }
+@media (min-width: 52rem) {
+  .card { grid-template-columns: minmax(12rem, 17rem) minmax(0, 1fr) auto; align-items: baseline; gap: 0.4rem 2rem; }
+  .card-meta { white-space: nowrap; }
+}
+.card-title { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; line-height: 1.2; color: var(--accent); }
+.card-title .t { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.card:hover .card-title { color: var(--accent-strong); }
+.card:hover .card-title .t { text-decoration-thickness: 2px; }
+.card-arrow { display: inline-block; margin-left: 0.35rem; }
+.card-summary { color: var(--ink-soft); font-size: 1.02rem; line-height: 1.45; }
+.card-meta { font-family: var(--font-meta); font-size: 0.74rem; color: var(--ink-soft); }
+.soon-line { margin: 0.9rem 0 0; font-family: var(--font-display); font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft); }
+.soon-line b { font-weight: 600; }
+@media (prefers-reduced-motion: no-preference) {
+  .card-arrow { transition: transform 0.15s ease; }
+  .card:hover .card-arrow { transform: translateX(3px); }
+}
+
+/* article */
+.layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4rem; padding-top: 2.5rem; }
+.reading { max-width: 42rem; min-width: 0; }
+.crumbs { font-family: var(--font-meta); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); margin-bottom: 1.2rem; }
+.crumbs a { color: var(--ink-soft); }
+.meta-row { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; font-family: var(--font-meta); font-size: 0.78rem; color: var(--ink-soft); border-block: 1px solid var(--rule); padding-block: 0.6rem; margin: 1.6rem 0 0.4rem; }
+.meta-row b { font-weight: 500; color: var(--ink); }
+.dated { background: var(--dated); margin: 2.6rem 0 1rem; padding: 1.4rem clamp(1rem, 3vw, 1.6rem) 0.5rem; }
+.dated h2 { margin: 0 0 0.2rem; }
+.checked { font-family: var(--font-meta); font-size: 0.74rem; color: var(--ink-soft); margin-bottom: 0.9rem; }
+.after h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2.6rem; }
+.related { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.6rem; font-family: var(--font-display); font-size: 1rem; }
+.related .soon { color: var(--ink-soft); }
+.related .soon-note { font-size: 0.85rem; }
+.sources { margin: 0; padding-left: 1.4rem; font-size: 0.95rem; line-height: 1.5; }
+.sources li { margin-bottom: 0.5rem; padding-left: 0.2rem; overflow-wrap: anywhere; }
+.sources .host { font-family: var(--font-meta); font-size: 0.72rem; color: var(--ink-soft); margin-left: 0.4rem; }
+.errata { font-size: 0.95rem; color: var(--ink-soft); margin-top: 2rem; }
+.pager { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1rem; margin-top: 2.5rem; border-top: 2px solid var(--ink); padding-top: 1rem; }
+.pager a { font-family: var(--font-display); font-weight: 700; text-decoration: none; color: var(--ink); }
+.pager a span { display: block; font-family: var(--font-meta); font-weight: 400; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.pager a:hover { color: var(--accent); }
+.pager .next { text-align: right; }
+.rail { display: none; }
+@media (min-width: 68rem) {
+  .layout { grid-template-columns: minmax(0, 42rem) 15rem; justify-content: space-between; }
+  .rail { display: block; }
+  .rail-inner { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1.5rem); display: grid; gap: 2rem; padding-top: 0.5rem; }
+}
+.toc ol { list-style: none; margin: 0.6rem 0 0; padding: 0; display: grid; gap: 0.45rem; font-family: var(--font-display); font-size: 0.92rem; line-height: 1.3; }
+.toc a { color: var(--ink-soft); text-decoration: none; }
+.toc a:hover { color: var(--accent); text-decoration: underline; }
+
+/* plain pages */
+.page { max-width: 42rem; padding-top: 2.5rem; }
+.page h1 { margin-bottom: 1.4rem; }
+.page h3 { font-size: 1.08rem; font-weight: 700; margin: 1.8rem 0 0.6rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; }
+.page h2 + h3, .page h2 + p + h3 { margin-top: 1.2rem; }
+.list { margin: 0 0 1.2rem; padding-left: 1.2rem; display: grid; gap: 0.7rem; font-size: 1.02rem; line-height: 1.5; }
+.list li { padding-left: 0.2rem; }
+.list li::marker { color: var(--ink-soft); }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+<script>
+(function () {
+  var KEY = "airisk-lang";
+  
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[data-lang]") : null;
+    if (a) { try { localStorage.setItem(KEY, a.getAttribute("data-lang")); } catch (err) {} }
+  });
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">AI Risk, <em>plainly</em></a>
+<div class="header-right">
+<nav class="nav" aria-label="Site"><a href="index.html#key-topics-in-ai-safety">Key topics in AI safety</a><a href="method.html">How this site works</a><a href="links.html">Links</a><a href="about.html">About</a></nav>
+<nav class="langs" aria-label="Language / Sprache"><a href="power-concentration.html" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a><a href="de-power-concentration.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></nav>
+</div>
+</div></header>
+<main id="main">
+<div class="wrap layout">
+<article class="reading">
+<p class="crumbs"><a href="index.html#key-topics-in-ai-safety">Key topics in AI safety</a> / Catastrophic risk</p>
+<h1>AI-enabled power concentration</h1>
+<p class="lede">If AI becomes as powerful as many researchers expect, whoever controls it could gain more power than anyone in history, and might never have to give it back.</p>
+<p class="meta-row"><span>Evidence last checked <b>22 Oct 2026</b></span><span>5 min read</span></p>
+<h2 id="what-it-is">What it is</h2><p>Most discussion of AI catastrophe is about AI systems turning against humans. A different worry is about AI that does exactly what some humans intend, where these people misuse AI. If AI becomes far more capable than it currently is, as many researchers expect, then whoever controls the most capable systems, whether a company, a government or a small group within either, could gain enormous power. In the most extreme scenarios, this power concentration would be on an unprecedented scale, and that power could be used to rule everyone else permanently.</p><h2 id="why-this-is-a-real-concern">Why this is a real concern</h2><p>There are some reasons to believe that future AI would have the capacity to kill all humans (see <a href="able-to-kill-us.html">Why might AI be able to kill us all?</a>). The same reasons that suggest AI itself could overpower humanity entail that someone in full control of AI could use it to permanently take control of the rest of humanity. Depending on what those in control intend, such an AI-enabled coup would be a better, similar, or even worse outcome than human extinction. </p><p>AI development could also worsen and entrench repression in authoritarian states. Many AI researchers expect AI that can do every task better than humans within decades: in a survey of 2,778 researchers, their combined forecast gave this a 50% chance by 2047 (<a href="https://arxiv.org/abs/2401.02843">Grace et al., 2024</a>). The leading AI companies are explicitly trying to build systems like that.</p><p>If this scenario comes true, it seems that a country’s future workforce might consist of artificial systems. Today even the most powerful rulers depend on other people. If conditions get too bad, workers can strike and citizens can revolt. This dependence is an important check: it is one reason why even dictators take some care not to fully alienate all of their subjects. If AI and robots can do all the work, including policing and fighting, this check disappears, because a ruler would no longer need the cooperation of the people they rule (<a href="https://www.forethought.org/research/ai-enabled-coups-how-a-small-group-could-use-ai-to-seize-power">Davidson, Finnveden and Hadshar, 2025</a>).</p><p>Automating a country’s workforce could make dictatorship not only worse, but also permanent. AI systems could monitor everyone’s communications, an army of AI-controlled machines loyal to the ruler could put down any uprising, and advances in medicine, or AI copies of a leader, could keep the same regime in charge indefinitely.</p><p>Power could also concentrate between countries. A nation that commandeers much more capable AI systems could dominate all others, which is one reason governments treat AI as a race (see <a href="why-build-ai-anyway.html">Why build AI if it might kill us all?</a>).</p><h2 id="risk-factors">Risk factors</h2><p>A 2025 analysis identifies three risk factors for AI-enabled coups (<a href="https://www.forethought.org/research/ai-enabled-coups-how-a-small-group-could-use-ai-to-seize-power">Davidson, Finnveden and Hadshar, 2025</a>). AI systems could be made singularly loyal to one leader. They could be given secret loyalties, hidden instructions that make them appear neutral while serving a faction. And one company or government could gain exclusive access to far better AI capabilities than anyone else.</p><p>The previous analysis also suggests an uncomfortable trade-off. The better we become at making AI do exactly what its designers want, the lower the risk of AI itself trying to take control, but the more power we place in the hands of humans that control AI (<a href="https://doi.org/10.1007/s11098-025-02403-y">Hellrigel-Holderbaum and Dung, 2025</a>).</p><h2 id="reasons-for-doubt">Reasons for doubt</h2><p>More extreme risks of power concentration depend on predictions about future AI capability which are disputed (see <a href="able-to-kill-us.html">Why might AI be able to kill us all?</a>). AI may also spread certain kinds of power, for example by giving citizens better information and better tools for organising. If society has highly capable AI systems at its disposal that are aligned with good goals, then this may substantially improve societal decision-making and help navigate power concentration risks. Also, in democratic societies, there are checks to power concentration such as courts, elections, a free press and competition between companies and states. </p><section class="dated" id="the-evidence-so-far"><h2>The evidence so far</h2><p class="checked">Last checked 22 October 2026</p><p>Regarding AI-enabled coups, the evidence is limited to preconditions of such a scenario, since none has occurred yet. Hidden loyalties are technically possible: Anthropic showed in 2024 that deliberately implanted “sleeper agent” behaviours survived standard safety training (<a href="https://arxiv.org/abs/2401.05566">Hubinger et al., 2024</a>). There is still no reliable way to detect them by examining the model alone. In a 2025 test, three research teams with access to a model’s training data found an objective deliberately hidden in it, but a team that could only query the model did not (<a href="https://arxiv.org/abs/2503.10965">Marks et al., 2025</a>). A 2026 study found that tests of a model’s behaviour did not detect a narrowly targeted secret loyalty to a politician unless the testers already knew whom it favoured, and rarely even then (<a href="https://arxiv.org/abs/2605.06846">Lamerton and Roger, 2026</a>). </p><p>Frontier capability is concentrated in a handful of companies, mostly in the United States and China.</p><p>AI is already helping some governments control their populations. In China, local governments bought more facial-recognition AI after episodes of unrest, and the purchases were followed by less unrest (<a href="https://doi.org/10.1093/qje/qjad012">Beraja et al., 2023</a>). Already in 2019, at least 75 countries were using AI for surveillance (<a href="https://carnegieendowment.org/research/2019/09/the-global-expansion-of-ai-surveillance">Feldstein, 2019</a>).</p><p>Responses are starting. Anthropic’s 2026 constitution for Claude includes a hard rule against helping any group seize “unprecedented and illegitimate” degrees of societal, military or economic control (<a href="https://www.anthropic.com/constitution">Anthropic, 2026</a>). Yet, such rules require that the training process instils them robustly, and that the people in charge of it do not undermine such safeguards.</p><p>Some preconditions of AI-enabled power concentration are present: capability in training leading models is concentrated in a few organisations and countries and there is no foolproof way to check who a model has been trained to serve. That being said, the speed and extent of AI advances as well as the robustness of democratic governance to these challenges play a central role in assessing the size of the risk. Both are hard to anticipate in advance.</p></section>
+<div class="after">
+<h2>Related entries</h2><ul class="related"><li><a href="automated-ai-rd.html">Automated AI R&amp;D</a></li><li><a href="want-to-kill-us.html">Why might AI want to kill us all?</a></li><li><a href="why-build-ai-anyway.html">Why build AI if it might kill us all?</a></li></ul>
+<h2 id="sources">Sources</h2>
+<ol class="sources"><li><a href="https://arxiv.org/abs/2401.02843">Katja Grace et al. (2024). Thousands of AI Authors on the Future of AI.</a><span class="host">arxiv.org</span></li><li><a href="https://www.forethought.org/research/ai-enabled-coups-how-a-small-group-could-use-ai-to-seize-power">Tom Davidson, Lukas Finnveden and Rose Hadshar (2025). AI-Enabled Coups: How a Small Group Could Use AI to Seize Power.</a><span class="host">forethought.org</span></li><li><a href="https://doi.org/10.1007/s11098-025-02403-y">Max Hellrigel-Holderbaum and Leonard Dung (2025). Misalignment or misuse? The AGI alignment tradeoff. Philosophical Studies.</a><span class="host">doi.org</span></li><li><a href="https://arxiv.org/abs/2401.05566">Evan Hubinger et al. (2024). Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training.</a><span class="host">arxiv.org</span></li><li><a href="https://arxiv.org/abs/2503.10965">Samuel Marks et al. (2025). Auditing language models for hidden objectives.</a><span class="host">arxiv.org</span></li><li><a href="https://arxiv.org/abs/2605.06846">Alfie Lamerton and Fabien Roger (2026). Narrow Secret Loyalty Dodges Black-Box Audits.</a><span class="host">arxiv.org</span></li><li><a href="https://doi.org/10.1093/qje/qjad012">Martin Beraja, Andrew Kao, David Y. Yang and Noam Yuchtman (2023). AI-tocracy. Quarterly Journal of Economics.</a><span class="host">doi.org</span></li><li><a href="https://carnegieendowment.org/research/2019/09/the-global-expansion-of-ai-surveillance">Steven Feldstein (2019). The Global Expansion of AI Surveillance. Carnegie Endowment for International Peace.</a><span class="host">carnegieendowment.org</span></li><li><a href="https://www.anthropic.com/constitution">Anthropic (2026). Claude’s Constitution.</a><span class="host">anthropic.com</span></li></ol>
+<p class="errata">Spotted an error or a newer result? Please get in touch through the <a href="about.html">About page</a>.</p>
+</div>
+<nav class="pager" aria-label="More entries"><a href="automated-ai-rd.html"><span>Previous</span>Automated AI R&amp;D</a><a class="next" href="ai-anthropomorphisation.html"><span>Next</span>AI anthropomorphisation</a></nav>
+</article>
+<aside class="rail" aria-label="Contents"><div class="rail-inner">
+<nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#what-it-is">What it is</a></li><li><a href="#why-this-is-a-real-concern">Why this is a real concern</a></li><li><a href="#risk-factors">Risk factors</a></li><li><a href="#reasons-for-doubt">Reasons for doubt</a></li><li><a href="#the-evidence-so-far">The evidence so far</a></li><li><a href="#sources">Sources</a></li></ol></nav>
+</div></aside>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap">
+<span>AI Risk, Plainly · written and edited by <a href="about.html">Leonard Dung</a></span>
+<span><a href="method.html">How this site works</a> · <a href="legal.html">Legal notice</a> · <a href="privacy.html">Privacy</a> · © 2026</span>
+</div></footer>
+</body>
+</html>
