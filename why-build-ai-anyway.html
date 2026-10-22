@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Why build AI if it might kill us all? · AI Risk, Plainly</title>
+<link rel="canonical" href="https://leonarddung.github.io/ai-risk-plainly/why-build-ai-anyway.html">
+<meta name="description" content="Many leaders of AI companies say AI could cause human extinction, yet race to build it anyway. The main reason is the perception that no one can stop alone.">
+
+<link rel="alternate" hreflang="en" href="https://leonarddung.github.io/ai-risk-plainly/why-build-ai-anyway.html">
+<link rel="alternate" hreflang="de" href="https://leonarddung.github.io/ai-risk-plainly/de-why-build-ai-anyway.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI Risk, Plainly">
+<meta property="og:title" content="Why build AI if it might kill us all?">
+<meta property="og:description" content="Many leaders of AI companies say AI could cause human extinction, yet race to build it anyway. The main reason is the perception that no one can stop alone.">
+<meta property="og:url" content="https://leonarddung.github.io/ai-risk-plainly/why-build-ai-anyway.html">
+<meta property="og:image" content="https://leonarddung.github.io/ai-risk-plainly/og/why-build-ai-anyway.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why build AI if it might kill us all? · AI Risk, Plainly">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why build AI if it might kill us all?">
+<meta name="twitter:description" content="Many leaders of AI companies say AI could cause human extinction, yet race to build it anyway. The main reason is the perception that no one can stop alone.">
+<meta name="twitter:image" content="https://leonarddung.github.io/ai-risk-plainly/og/why-build-ai-anyway.png">
+<meta name="twitter:image:alt" content="Why build AI if it might kill us all? · AI Risk, Plainly">
+<style>/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin-ext-60d1ee.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin-8d0aea.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-italic-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+:root {
+  /* Layout: a reference work. One reading column of about 66 characters, with a margin rail
+     for the contents; the evidence section sits on a quiet tinted panel. */
+  --paper: #F3F5F5;
+  --raised: #FFFFFF;
+  --ink: #161A1D;
+  --ink-soft: #4C565B;
+  --rule: #C7D0D3;
+  --accent: #0A5C65;
+  --accent-strong: #063E44;
+  --dated: #E3EAEC;
+  --tag: #F1C23C;
+  --tag-ink: #2A2105;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-meta: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0F1315; --raised: #161C1F; --ink: #E3E8E9; --ink-soft: #9BA7AB; --rule: #2B3539;
+    --accent: #66C7C6; --accent-strong: #A3E2DF; --dated: #162024; --tag: #D6AE3A; --tag-ink: #1B1503;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0F1315; --raised: #161C1F; --ink: #E3E8E9; --ink-soft: #9BA7AB; --rule: #2B3539;
+  --accent: #66C7C6; --accent-strong: #A3E2DF; --dated: #162024; --tag: #D6AE3A; --tag-ink: #1B1503;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: 1.125rem; line-height: 1.62;
+  font-optical-sizing: auto; text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { color: var(--accent-strong); text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 72rem; margin-inline: auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: var(--gutter-l); top: 0.5rem; background: var(--raised); padding: 0.4rem 0.7rem; z-index: 2; }
+
+/* bands */
+.banner { background: var(--tag); color: var(--tag-ink); font-family: var(--font-meta); font-size: 0.75rem; letter-spacing: 0.04em; }
+.banner .wrap { padding-block: 0.4rem; }
+.site-header { border-bottom: 1px solid var(--rule); }
+.site-header .wrap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1rem; }
+.brand { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+.brand em { font-family: var(--font-body); font-weight: 400; color: var(--accent); }
+.brand:hover { color: var(--ink); }
+.nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; font-family: var(--font-display); font-size: 0.95rem; font-weight: 500; }
+.nav a { color: var(--ink-soft); text-decoration: none; }
+.header-right { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.5rem; }
+.langs { display: flex; gap: 0.3rem; font-family: var(--font-meta); font-size: 0.74rem; letter-spacing: 0.04em; }
+.langs a { color: var(--ink-soft); text-decoration: none; padding: 0.1rem 0.45rem; border: 1px solid var(--rule); border-radius: 3px; }
+.langs a:hover { color: var(--ink); border-color: var(--ink-soft); }
+.langs a[aria-current] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.35em; }
+.site-footer { border-top: 1px solid var(--rule); margin-top: 5rem; font-family: var(--font-display); font-size: 0.9rem; color: var(--ink-soft); }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; padding-block: 2rem 3rem; }
+.site-footer a { color: var(--ink-soft); }
+
+/* type */
+h1, h2, h3 { font-family: var(--font-display); color: var(--ink); text-wrap: balance; margin: 0; }
+h1 { font-weight: 800; font-size: clamp(2.2rem, 5.5vw, 3.4rem); line-height: 1.04; letter-spacing: -0.025em; }
+h2 { font-weight: 700; font-size: 1.45rem; line-height: 1.2; letter-spacing: -0.01em; margin-top: 2.6rem; margin-bottom: 0.6rem; }
+p { margin: 0 0 1.05em; }
+.label { font-family: var(--font-meta); font-size: 0.74rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.lede { font-size: 1.3rem; line-height: 1.45; color: var(--ink-soft); margin-top: 1rem; max-width: 38rem; }
+
+/* home */
+.masthead { padding-block: clamp(2.5rem, 7vw, 5rem) 2.5rem; }
+.wordmark { font-size: clamp(2.9rem, 9vw, 6rem); line-height: 0.92; letter-spacing: -0.035em; }
+.wordmark em { display: block; font-family: var(--font-body); font-weight: 400; color: var(--accent); letter-spacing: -0.02em; }
+.anatomy-wrap { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+.anatomy-label { font-size: 1.45rem; letter-spacing: 0.06em; }
+.anatomy { list-style: none; counter-reset: part; display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem 2rem; margin: 0.8rem 0 0; padding: 0; }
+.anatomy li { counter-increment: part; position: relative; padding-left: 2.1rem; min-width: 0; font-size: 0.98rem; line-height: 1.45; color: var(--ink-soft); }
+.anatomy li::before {
+  content: counter(part); position: absolute; left: 0; top: 0.05rem; width: 1.45rem; height: 1.45rem;
+  display: grid; place-items: center; border: 1px solid var(--rule); border-radius: 50%;
+  font-family: var(--font-meta); font-size: 0.72rem; color: var(--ink-soft);
+}
+.anatomy b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--ink); }
+.index { padding-top: 1rem; }
+.index-head { border-top: 3px solid var(--ink); padding-top: 1.1rem; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.4rem 2rem; }
+.index-head h2 { margin: 0; font-size: clamp(1.9rem, 4.5vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; }
+.index-head p { margin: 0; font-family: var(--font-display); font-size: 1rem; color: var(--ink-soft); }
+.theme { margin-top: 2.6rem; }
+.theme h3 { display: flex; align-items: center; gap: 0.8rem; font-size: 1.75rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.15; margin-bottom: 1.1rem; }
+.theme h3::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+.cards li { min-width: 0; }
+.card {
+  display: grid; align-content: start; gap: 0.5rem; height: 100%; padding: 1.15rem 1.25rem 1.05rem;
+  background: var(--raised); border: 1px solid var(--rule); border-radius: 3px;
+  color: var(--ink); text-decoration: none;
+}
+.card:hover { border-color: var(--accent); color: var(--ink); }
+@media (min-width: 52rem) {
+  .card { grid-template-columns: minmax(12rem, 17rem) minmax(0, 1fr) auto; align-items: baseline; gap: 0.4rem 2rem; }
+  .card-meta { white-space: nowrap; }
+}
+.card-title { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; line-height: 1.2; color: var(--accent); }
+.card-title .t { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.card:hover .card-title { color: var(--accent-strong); }
+.card:hover .card-title .t { text-decoration-thickness: 2px; }
+.card-arrow { display: inline-block; margin-left: 0.35rem; }
+.card-summary { color: var(--ink-soft); font-size: 1.02rem; line-height: 1.45; }
+.card-meta { font-family: var(--font-meta); font-size: 0.74rem; color: var(--ink-soft); }
+.soon-line { margin: 0.9rem 0 0; font-family: var(--font-display); font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft); }
+.soon-line b { font-weight: 600; }
+@media (prefers-reduced-motion: no-preference) {
+  .card-arrow { transition: transform 0.15s ease; }
+  .card:hover .card-arrow { transform: translateX(3px); }
+}
+
+/* article */
+.layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4rem; padding-top: 2.5rem; }
+.reading { max-width: 42rem; min-width: 0; }
+.crumbs { font-family: var(--font-meta); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); margin-bottom: 1.2rem; }
+.crumbs a { color: var(--ink-soft); }
+.meta-row { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; font-family: var(--font-meta); font-size: 0.78rem; color: var(--ink-soft); border-block: 1px solid var(--rule); padding-block: 0.6rem; margin: 1.6rem 0 0.4rem; }
+.meta-row b { font-weight: 500; color: var(--ink); }
+.dated { background: var(--dated); margin: 2.6rem 0 1rem; padding: 1.4rem clamp(1rem, 3vw, 1.6rem) 0.5rem; }
+.dated h2 { margin: 0 0 0.2rem; }
+.checked { font-family: var(--font-meta); font-size: 0.74rem; color: var(--ink-soft); margin-bottom: 0.9rem; }
+.after h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2.6rem; }
+.related { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.6rem; font-family: var(--font-display); font-size: 1rem; }
+.related .soon { color: var(--ink-soft); }
+.related .soon-note { font-size: 0.85rem; }
+.sources { margin: 0; padding-left: 1.4rem; font-size: 0.95rem; line-height: 1.5; }
+.sources li { margin-bottom: 0.5rem; padding-left: 0.2rem; overflow-wrap: anywhere; }
+.sources .host { font-family: var(--font-meta); font-size: 0.72rem; color: var(--ink-soft); margin-left: 0.4rem; }
+.errata { font-size: 0.95rem; color: var(--ink-soft); margin-top: 2rem; }
+.pager { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1rem; margin-top: 2.5rem; border-top: 2px solid var(--ink); padding-top: 1rem; }
+.pager a { font-family: var(--font-display); font-weight: 700; text-decoration: none; color: var(--ink); }
+.pager a span { display: block; font-family: var(--font-meta); font-weight: 400; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.pager a:hover { color: var(--accent); }
+.pager .next { text-align: right; }
+.rail { display: none; }
+@media (min-width: 68rem) {
+  .layout { grid-template-columns: minmax(0, 42rem) 15rem; justify-content: space-between; }
+  .rail { display: block; }
+  .rail-inner { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1.5rem); display: grid; gap: 2rem; padding-top: 0.5rem; }
+}
+.toc ol { list-style: none; margin: 0.6rem 0 0; padding: 0; display: grid; gap: 0.45rem; font-family: var(--font-display); font-size: 0.92rem; line-height: 1.3; }
+.toc a { color: var(--ink-soft); text-decoration: none; }
+.toc a:hover { color: var(--accent); text-decoration: underline; }
+
+/* plain pages */
+.page { max-width: 42rem; padding-top: 2.5rem; }
+.page h1 { margin-bottom: 1.4rem; }
+.page h3 { font-size: 1.08rem; font-weight: 700; margin: 1.8rem 0 0.6rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; }
+.page h2 + h3, .page h2 + p + h3 { margin-top: 1.2rem; }
+.list { margin: 0 0 1.2rem; padding-left: 1.2rem; display: grid; gap: 0.7rem; font-size: 1.02rem; line-height: 1.5; }
+.list li { padding-left: 0.2rem; }
+.list li::marker { color: var(--ink-soft); }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+<script>
+(function () {
+  var KEY = "airisk-lang";
+  
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[data-lang]") : null;
+    if (a) { try { localStorage.setItem(KEY, a.getAttribute("data-lang")); } catch (err) {} }
+  });
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">AI Risk, <em>plainly</em></a>
+<div class="header-right">
+<nav class="nav" aria-label="Site"><a href="index.html#key-topics-in-ai-safety">Key topics in AI safety</a><a href="method.html">How this site works</a><a href="links.html">Links</a><a href="about.html">About</a></nav>
+<nav class="langs" aria-label="Language / Sprache"><a href="why-build-ai-anyway.html" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a><a href="de-why-build-ai-anyway.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></nav>
+</div>
+</div></header>
+<main id="main">
+<div class="wrap layout">
+<article class="reading">
+<p class="crumbs"><a href="index.html#key-topics-in-ai-safety">Key topics in AI safety</a> / Catastrophic risk</p>
+<h1>Why build AI if it might kill us all?</h1>
+<p class="lede">Many leaders of AI companies say AI could cause human extinction, yet race to build it anyway. The main reason is the perception that no one can stop alone.</p>
+<p class="meta-row"><span>Evidence last checked <b>21 Oct 2026</b></span><span>4 min read</span></p>
+<h2 id="what-it-is">What it is</h2><p>Many of the people building the most advanced AI systems say publicly that those systems could end humanity. In 2015, months before co-founding OpenAI, Sam Altman wrote that superhuman machine intelligence is “probably the greatest threat to the continued existence of humanity” (<a href="https://blog.samaltman.com/machine-intelligence-part-1">Altman, 2015</a>). In 2023 the chief executives of OpenAI, Google DeepMind and Anthropic signed a one-sentence statement saying that reducing the risk of extinction from AI should be a global priority alongside pandemics and nuclear war (<a href="https://www.safe.ai/work/statement-on-ai-risk">Center for AI Safety, 2023</a>). Anthropic’s Dario Amodei and Elon Musk, who founded xAI, have put the chance of catastrophe at 25% and 10–20% respectively (see <a href="p-doom.html">P(doom)</a>). Yet their companies race to build ever more capable systems, and several have made superintelligence their stated goal. To many observers this looks contradictory. There are several explanations, and they can all be true at once.</p><h2 id="why-they-build-it-anyway">Why they build it anyway</h2><p>The most important explanation is that AI development involves a coordination problem. Leaders of AI companies often reason that someone will build very powerful AI whether or not they take part. If a careful company holds back, a less careful one takes the lead; if a country holds back, a rival country may get there first. So, each prefers to stay in the race, ideally at the front, even though all of them might prefer that everyone slowed down. A formal model shows how such races push competitors to skimp on safety, because whoever finishes first has a chance to gain the most (<a href="https://link.springer.com/article/10.1007/s00146-015-0590-y">Armstrong, Bostrom and Shulman, 2016</a>). These race dynamics could cause rapid continuing AI advances even if the key actors all believe that it is not worth it overall because it may destroy humanity. To overcome this coordination problem, national regulation would likely be required within a country, and international agreements between countries.</p><p>A second explanation is that the people who decide may weigh the stakes differently from everyone else. Leaders of AI companies are uncertain about extinction risk, and even someone who puts it at 10% thinks success is far more likely. If they succeed, they and their investors stand to gain enormous wealth and power. If catastrophe strikes, the cost falls on everyone. Economists call such a cost an externality: those who decide do not bear most of the risk they create. Economic modelling shows that how much risk is worth accepting for AI’s benefits depends heavily on how much one stands to gain and how one weighs catastrophe (<a href="https://www.aeaweb.org/doi/10.1257/aeri.20230570">Jones, 2024</a>). In this matter, the leaders of AI companies face incentives that are very different from those of most people.</p><p>There are many more factors that likely play a role. Many expect enormous benefits, such as cures for diseases and faster economic growth, and think that not building AI quickly would forgo or delay them. People who think the risk is manageable are more likely to work at AI companies in the first place, large salaries and company shares make safety-focused conclusions harder to reach, and scientific ambition and curiosity pull in the same direction. Some argue that concerns about AI catastrophe are entirely feigned for political gain or marketing (<a href="https://www.businessinsider.com/andrew-ng-google-brain-big-tech-ai-risks-2023-10">Business Insider, 2023</a>; <a href="https://qz.com/trump-anthropic-david-sacks-ai-regulation">Quartz, 2025</a>). However, this explanation does not seem to fit the evidence (<a href="https://www.astralcodexten.com/p/ai-safety-is-not-a-corporate-plot">Alexander, 2026</a>).</p><section class="dated" id="the-evidence-so-far"><h2>The evidence so far</h2><p class="checked">Last checked 21 October 2026</p><p>AI company leaders now say openly that they would prefer to slow down. At the World Economic Forum in January 2026, Demis Hassabis of Google DeepMind said that a “slightly slower pace” might be good, and Dario Amodei agreed, adding that it is very hard to reach an enforceable agreement for everyone to slow down (<a href="https://www.transformernews.ai/p/ai-ceos-want-to-slow-down-the-worlds-davos-demis-hassabis-dario-amodei">Transformer, 2026</a>). In September 2026 Amodei called for coordinated “pacing” of AI progress, first among companies in democratic countries and eventually with China, while warning that slowing down by more than the US lead over China could let Chinese projects pull ahead (<a href="https://www.darioamodei.com/post/we-must-pace-the-frontier">Amodei, 2026</a>). OpenAI’s Sam Altman voiced support (<a href="https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing">Axios, 2026</a>), and so did Hassabis (<a href="https://www.cnbc.com/2026/09/13/china-dilemma-ai-slowdown-anthropic.html">CNBC, 2026</a>).</p><p>Yet, the companies have lobbied against binding rules. OpenAI pressed the European Union not to classify general-purpose systems such as GPT-3 as high-risk under its AI Act (<a href="https://time.com/6288245/openai-eu-lobbying-ai-act/">Time, 2023</a>), and in 2026 urged Congress to override (“pre-empt”) state AI safety laws (<a href="https://cdn.openai.com/pdf/25752ecb-0e5c-47f9-b9e4-c0f4d76f8d3d/a-blueprint-for-a-federal-framework.pdf">OpenAI, 2026</a>). Its president, Greg Brockman, backs Leading the Future, a political campaign group launched with more than $100 million in pledges, which favours a “light-touch” approach to AI regulation and has campaigned against the sponsor of New York’s AI safety bill (<a href="https://techcrunch.com/2025/11/17/a16z-backed-super-pac-is-targeting-alex-bores-sponsor-of-new-yorks-ai-safety-bill-he-says-bring-it-on/">TechCrunch, 2025</a>). Anthropic has supported more regulation than its rivals, for example by endorsing California’s transparency law for frontier AI developers (<a href="https://www.anthropic.com/news/anthropic-is-endorsing-sb-53">Anthropic, 2025</a>). But in October 2026 it was reported to be circulating a draft federal bill which would override state rules on safety disclosures, testing and incident reporting, such as those in California’s law (<a href="https://techstrong.ai/articles/anthropic-quietly-pitches-bill-to-regulate-frontier-ai-safety-on-capitol-hill/">Techstrong.ai, 2026</a>; <a href="https://www.motherjones.com/politics/2026/10/anthropics-ai-safety-bill-has-an-alarming-threshold-for-government-action/">Mother Jones, 2026</a>).</p><p>Concerns have also been raised by researchers without industry ties. Hundreds of AI scientists, many of them at universities, signed the 2023 statement that reducing the risk of extinction from AI should be a global priority (<a href="https://www.safe.ai/work/statement-on-ai-risk">Center for AI Safety, 2023</a>). In 2024, 25 leading researchers, most of them at universities, warned in the journal Science that humanity could irreversibly lose control of autonomous AI systems (<a href="https://doi.org/10.1126/science.adn0117">Bengio et al., 2024</a>). And in 2025, leading researchers such as Geoffrey Hinton, Yoshua Bengio and Stuart Russell, together with tens of thousands of other people, called for a ban on developing superintelligence until there is broad scientific agreement that it can be done safely and controllably, and strong public support (<a href="https://superintelligence-statement.org/">Future of Life Institute, 2025</a>). </p></section>
+<div class="after">
+<h2>Related entries</h2><ul class="related"><li><a href="p-doom.html">P(doom)</a></li><li class="soon">AI-enabled power concentration <span class="soon-note">(in preparation)</span></li><li><a href="automated-ai-rd.html">Automated AI R&amp;D</a></li></ul>
+<h2 id="sources">Sources</h2>
+<ol class="sources"><li><a href="https://blog.samaltman.com/machine-intelligence-part-1">Sam Altman (2015). Machine intelligence, part 1.</a><span class="host">blog.samaltman.com</span></li><li><a href="https://www.safe.ai/work/statement-on-ai-risk">Center for AI Safety (2023). Statement on AI Risk.</a><span class="host">safe.ai</span></li><li><a href="https://link.springer.com/article/10.1007/s00146-015-0590-y">Stuart Armstrong, Nick Bostrom and Carl Shulman (2016). Racing to the precipice: a model of artificial intelligence development. AI &amp; Society.</a><span class="host">link.springer.com</span></li><li><a href="https://www.aeaweb.org/doi/10.1257/aeri.20230570">Charles I. Jones (2024). The AI Dilemma: Growth versus Existential Risk. American Economic Review: Insights.</a><span class="host">aeaweb.org</span></li><li><a href="https://www.businessinsider.com/andrew-ng-google-brain-big-tech-ai-risks-2023-10">Business Insider (2023). Google Brain cofounder says Big Tech companies are inflating fears about the risks of AI wiping out humanity.</a><span class="host">businessinsider.com</span></li><li><a href="https://qz.com/trump-anthropic-david-sacks-ai-regulation">Quartz (2025). Tensions are brewing between Anthropic and the White House over AI regulation.</a><span class="host">qz.com</span></li><li><a href="https://www.astralcodexten.com/p/ai-safety-is-not-a-corporate-plot">Scott Alexander (2026). AI Safety Is Not A Corporate Plot. Astral Codex Ten.</a><span class="host">astralcodexten.com</span></li><li><a href="https://www.transformernews.ai/p/ai-ceos-want-to-slow-down-the-worlds-davos-demis-hassabis-dario-amodei">Transformer (2026). AI CEOs want to slow down. The world’s too busy to help.</a><span class="host">transformernews.ai</span></li><li><a href="https://www.darioamodei.com/post/we-must-pace-the-frontier">Dario Amodei (2026). We Must Pace the Frontier.</a><span class="host">darioamodei.com</span></li><li><a href="https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing">Axios (2026). Anthropic, OpenAI CEOs call for slowdown in AI development.</a><span class="host">axios.com</span></li><li><a href="https://www.cnbc.com/2026/09/13/china-dilemma-ai-slowdown-anthropic.html">CNBC (2026). Anthropic’s Amodei says China presents ‘toughest dilemma’ for his proposed AI slowdown.</a><span class="host">cnbc.com</span></li><li><a href="https://time.com/6288245/openai-eu-lobbying-ai-act/">Billy Perrigo (2023). Exclusive: OpenAI Lobbied the E.U. to Water Down AI Regulation. TIME.</a><span class="host">time.com</span></li><li><a href="https://cdn.openai.com/pdf/25752ecb-0e5c-47f9-b9e4-c0f4d76f8d3d/a-blueprint-for-a-federal-framework.pdf">OpenAI (2026). Democratic Governance of Frontier AI: A blueprint for a federal framework.</a><span class="host">cdn.openai.com</span></li><li><a href="https://techcrunch.com/2025/11/17/a16z-backed-super-pac-is-targeting-alex-bores-sponsor-of-new-yorks-ai-safety-bill-he-says-bring-it-on/">TechCrunch (2025). a16z-backed super PAC is targeting Alex Bores, sponsor of New York’s AI safety bill.</a><span class="host">techcrunch.com</span></li><li><a href="https://www.anthropic.com/news/anthropic-is-endorsing-sb-53">Anthropic (2025). Anthropic is endorsing SB 53.</a><span class="host">anthropic.com</span></li><li><a href="https://techstrong.ai/articles/anthropic-quietly-pitches-bill-to-regulate-frontier-ai-safety-on-capitol-hill/">Techstrong.ai (2026). Anthropic quietly pitches bill to regulate frontier AI safety on Capitol Hill.</a><span class="host">techstrong.ai</span></li><li><a href="https://www.motherjones.com/politics/2026/10/anthropics-ai-safety-bill-has-an-alarming-threshold-for-government-action/">Mother Jones (2026). Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action.</a><span class="host">motherjones.com</span></li><li><a href="https://doi.org/10.1126/science.adn0117">Yoshua Bengio, Geoffrey Hinton et al. (2024). Managing extreme AI risks amid rapid progress. Science.</a><span class="host">doi.org</span></li><li><a href="https://superintelligence-statement.org/">Future of Life Institute (2025). Statement on Superintelligence.</a><span class="host">superintelligence-statement.org</span></li></ol>
+<p class="errata">Spotted an error or a newer result? Please get in touch through the <a href="about.html">About page</a>.</p>
+</div>
+<nav class="pager" aria-label="More entries"><a href="p-doom.html"><span>Previous</span>P(doom)</a><a class="next" href="automated-ai-rd.html"><span>Next</span>Automated AI R&amp;D</a></nav>
+</article>
+<aside class="rail" aria-label="Contents"><div class="rail-inner">
+<nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#what-it-is">What it is</a></li><li><a href="#why-they-build-it-anyway">Why they build it anyway</a></li><li><a href="#the-evidence-so-far">The evidence so far</a></li><li><a href="#sources">Sources</a></li></ol></nav>
+</div></aside>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap">
+<span>AI Risk, Plainly · written and edited by <a href="about.html">Leonard Dung</a></span>
+<span><a href="method.html">How this site works</a> · <a href="legal.html">Legal notice</a> · <a href="privacy.html">Privacy</a> · © 2026</span>
+</div></footer>
+</body>
+</html>
