@@ -289,6 +289,12 @@ p { margin: 0 0 1.05em; }
 .card-meta { font-family: var(--font-meta); font-size: 0.74rem; color: var(--ink-soft); }
 .soon-line { margin: 0.9rem 0 0; font-family: var(--font-display); font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft); }
 .soon-line b { font-weight: 600; }
+.newsletter { margin-top: 3.5rem; max-width: 42rem; padding: 1.4rem clamp(1rem, 3vw, 1.75rem) 1.2rem; background: var(--raised); border: 1px solid var(--rule); border-radius: 3px; }
+.newsletter h2 { margin: 0 0 0.5rem; }
+.newsletter p { color: var(--ink-soft); }
+.nl-button { display: inline-block; font-family: var(--font-display); font-weight: 700; font-size: 1rem; padding: 0.55rem 1.15rem; border-radius: 3px; background: var(--accent); color: var(--paper); text-decoration: none; }
+.nl-button:hover { background: var(--accent-strong); color: var(--paper); }
+.nl-note { font-size: 0.9rem; line-height: 1.5; margin: 0.75rem 0 0; }
 @media (prefers-reduced-motion: no-preference) {
   .card-arrow { transition: transform 0.15s ease; }
   .card:hover .card-arrow { transform: translateX(3px); }
@@ -382,7 +388,7 @@ html:lang(zh) :is(h1, h2, h3, .wordmark, .wordmark em, .brand, .index-head h2) {
 <h2>Verwandte Einträge</h2><ul class="related"><li><a href="de-scheming.html">Verdeckte Zielverfolgung (Scheming)</a></li><li><a href="de-chain-of-thought-monitorability.html">Überwachbarkeit der Gedankenkette (Chain-of-Thought Monitorability)</a></li><li><a href="de-reward-hacking.html">Belohnungs-Hacking (Reward Hacking)</a></li></ul>
 <h2 id="sources">Quellen</h2>
 <ol class="sources"><li><a href="https://openreview.net/forum?id=kw6nCmfxzg">Jasmine X. Li and Alexander Turner (2026). Eval Cooperativeness Mitigates Evaluation Gaming in LLMs. ICML 2026.</a><span class="host">openreview.net</span></li><li><a href="https://arxiv.org/abs/2509.15541">Bronson Schoen et al. (2025). Stress Testing Deliberative Alignment for Anti-Scheming Training.</a><span class="host">arxiv.org</span></li><li><a href="https://arxiv.org/abs/2505.23836">Joe Needham et al. (2025). Large Language Models Often Know When They Are Being Evaluated.</a><span class="host">arxiv.org</span></li><li><a href="https://assets.anthropic.com/m/12f214efcc2f457a/original/Claude-Sonnet-4-5-System-Card.pdf">Anthropic (2025). System Card: Claude Sonnet 4.5.</a><span class="host">assets.anthropic.com</span></li><li><a href="https://www.anthropic.com/claude-opus-4-6-system-card">Anthropic (2026). System Card: Claude Opus 4.6.</a><span class="host">anthropic.com</span></li><li><a href="https://deploymentsafety.openai.com/gpt-6-astra/metagaming-and-alignment-faking-in-evaluations">OpenAI (2026). GPT-6 Astra System Card: metagaming and alignment faking in evaluations.</a><span class="host">deploymentsafety.openai.com</span></li><li><a href="https://arxiv.org/abs/2603.01608">Mia Hopman et al. (2026). Evaluating and Understanding Scheming Propensity in LLM Agents.</a><span class="host">arxiv.org</span></li><li><a href="https://arxiv.org/abs/2605.05835">Amelie Knecht, Lucas Florin and Thilo Hagendorff (2026). Evaluation Awareness in Language Models Has Limited Effect on Behaviour.</a><span class="host">arxiv.org</span></li></ol>
-<p class="errata">Fehler entdeckt oder ein neueres Ergebnis? Bitte melden Sie sich über die Seite <a href="de-about.html">Über mich</a>.</p>
+<p class="errata">Fehler entdeckt oder ein neueres Ergebnis? Bitte melden Sie sich über die Seite <a href="de-about.html">Über mich</a>. Neue Einträge und wichtige Aktualisierungen per E-Mail: <a href="https://airiskplainly.substack.com/subscribe">auf Substack abonnieren</a>.</p>
 </div>
 <nav class="pager" aria-label="Weitere Einträge"><a href="de-ai-evaluations.html"><span>Zurück</span>KI-Evaluierungen (AI Evaluations)</a><a class="next" href="de-mechanistic-interpretability.html"><span>Weiter</span>Mechanistische Interpretierbarkeit (Mechanistic Interpretability)</a></nav>
 </article>
