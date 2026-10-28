@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wohlergehen von KI (AI Welfare) · KI-Risiken im Klartext</title>
+<link rel="canonical" href="https://leonarddung.github.io/ai-risk-plainly/de-ai-welfare.html">
+<meta name="description" content="Manche KI-Systeme könnten ein Wohlergehen haben, jetzt oder in naher Zukunft: Es könnte ihnen gut oder schlecht ergehen. Ob das so ist und was wir ihnen schulden würden, ist zutiefst ungewiss.">
+
+<link rel="alternate" hreflang="en" href="https://leonarddung.github.io/ai-risk-plainly/ai-welfare.html">
+<link rel="alternate" hreflang="de" href="https://leonarddung.github.io/ai-risk-plainly/de-ai-welfare.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KI-Risiken im Klartext">
+<meta property="og:title" content="Wohlergehen von KI (AI Welfare)">
+<meta property="og:description" content="Manche KI-Systeme könnten ein Wohlergehen haben, jetzt oder in naher Zukunft: Es könnte ihnen gut oder schlecht ergehen. Ob das so ist und was wir ihnen schulden würden, ist zutiefst ungewiss.">
+<meta property="og:url" content="https://leonarddung.github.io/ai-risk-plainly/de-ai-welfare.html">
+<meta property="og:image" content="https://leonarddung.github.io/ai-risk-plainly/og/de-ai-welfare.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Wohlergehen von KI (AI Welfare) · KI-Risiken im Klartext">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wohlergehen von KI (AI Welfare)">
+<meta name="twitter:description" content="Manche KI-Systeme könnten ein Wohlergehen haben, jetzt oder in naher Zukunft: Es könnte ihnen gut oder schlecht ergehen. Ob das so ist und was wir ihnen schulden würden, ist zutiefst ungewiss.">
+<meta name="twitter:image" content="https://leonarddung.github.io/ai-risk-plainly/og/de-ai-welfare.png">
+<meta name="twitter:image:alt" content="Wohlergehen von KI (AI Welfare) · KI-Risiken im Klartext">
+<style>/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin-ext-60d1ee.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-latin-8d0aea.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(fonts/schibsted-grotesk-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-italic-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+:root {
+  /* Layout: a reference work. One reading column of about 66 characters, with a margin rail
+     for the contents; the evidence section sits on a quiet tinted panel. */
+  --paper: #F3F5F5;
+  --raised: #FFFFFF;
+  --ink: #161A1D;
+  --ink-soft: #4C565B;
+  --rule: #C7D0D3;
+  --accent: #0A5C65;
+  --accent-strong: #063E44;
+  --dated: #E3EAEC;
+  --tag: #F1C23C;
+  --tag-ink: #2A2105;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-meta: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0F1315; --raised: #161C1F; --ink: #E3E8E9; --ink-soft: #9BA7AB; --rule: #2B3539;
+    --accent: #66C7C6; --accent-strong: #A3E2DF; --dated: #162024; --tag: #D6AE3A; --tag-ink: #1B1503;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0F1315; --raised: #161C1F; --ink: #E3E8E9; --ink-soft: #9BA7AB; --rule: #2B3539;
+  --accent: #66C7C6; --accent-strong: #A3E2DF; --dated: #162024; --tag: #D6AE3A; --tag-ink: #1B1503;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: 1.125rem; line-height: 1.62;
+  font-optical-sizing: auto; text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { color: var(--accent-strong); text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 72rem; margin-inline: auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: var(--gutter-l); top: 0.5rem; background: var(--raised); padding: 0.4rem 0.7rem; z-index: 2; }
+
+/* bands */
+.banner { background: var(--tag); color: var(--tag-ink); font-family: var(--font-meta); font-size: 0.75rem; letter-spacing: 0.04em; }
+.banner .wrap { padding-block: 0.4rem; }
+.site-header { border-bottom: 1px solid var(--rule); }
+.site-header .wrap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1rem; }
+.brand { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+.brand em { font-family: var(--font-body); font-weight: 400; color: var(--accent); }
+.brand:hover { color: var(--ink); }
+.nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; font-family: var(--font-display); font-size: 0.95rem; font-weight: 500; }
+.nav a { color: var(--ink-soft); text-decoration: none; }
+.header-right { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.5rem; }
+.langs { display: flex; gap: 0.3rem; font-family: var(--font-meta); font-size: 0.74rem; letter-spacing: 0.04em; }
+.langs a { color: var(--ink-soft); text-decoration: none; padding: 0.1rem 0.45rem; border: 1px solid var(--rule); border-radius: 3px; }
+.langs a:hover { color: var(--ink); border-color: var(--ink-soft); }
+.langs a[aria-current] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.35em; }
+.site-footer { border-top: 1px solid var(--rule); margin-top: 5rem; font-family: var(--font-display); font-size: 0.9rem; color: var(--ink-soft); }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; padding-block: 2rem 3rem; }
+.site-footer a { color: var(--ink-soft); }
+
+/* type */
+h1, h2, h3 { font-family: var(--font-display); color: var(--ink); text-wrap: balance; margin: 0; }
+h1 { font-weight: 800; font-size: clamp(2.2rem, 5.5vw, 3.4rem); line-height: 1.04; letter-spacing: -0.025em; }
+h2 { font-weight: 700; font-size: 1.45rem; line-height: 1.2; letter-spacing: -0.01em; margin-top: 2.6rem; margin-bottom: 0.6rem; }
+p { margin: 0 0 1.05em; }
+.label { font-family: var(--font-meta); font-size: 0.74rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.lede { font-size: 1.3rem; line-height: 1.45; color: var(--ink-soft); margin-top: 1rem; max-width: 38rem; }
+
+/* home */
+.masthead { padding-block: clamp(2.5rem, 7vw, 5rem) 2.5rem; }
+.wordmark { font-size: clamp(2.9rem, 9vw, 6rem); line-height: 0.92; letter-spacing: -0.035em; }
+.wordmark em { display: block; font-family: var(--font-body); font-weight: 400; color: var(--accent); letter-spacing: -0.02em; }
+.anatomy-wrap { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+.anatomy-label { font-size: 1.45rem; letter-spacing: 0.06em; }
+.anatomy { list-style: none; counter-reset: part; display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem 2rem; margin: 0.8rem 0 0; padding: 0; }
+.anatomy li { counter-increment: part; position: relative; padding-left: 2.1rem; min-width: 0; font-size: 0.98rem; line-height: 1.45; color: var(--ink-soft); }
+.anatomy li::before {
+  content: counter(part); position: absolute; left: 0; top: 0.05rem; width: 1.45rem; height: 1.45rem;
+  display: grid; place-items: center; border: 1px solid var(--rule); border-radius: 50%;
+  font-family: var(--font-meta); font-size: 0.72rem; color: var(--ink-soft);
+}
+.anatomy b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--ink); }
+.index { padding-top: 1rem; }
+.index-head { border-top: 3px solid var(--ink); padding-top: 1.1rem; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.4rem 2rem; }
+.index-head h2 { margin: 0; font-size: clamp(1.9rem, 4.5vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; }
+.index-head p { margin: 0; font-family: var(--font-display); font-size: 1rem; color: var(--ink-soft); }
+.theme { margin-top: 2.6rem; }
+.theme h3 { display: flex; align-items: center; gap: 0.8rem; font-size: 1.75rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.15; margin-bottom: 1.1rem; }
+.theme h3::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+.cards li { min-width: 0; }
+.card {
+  display: grid; align-content: start; gap: 0.5rem; height: 100%; padding: 1.15rem 1.25rem 1.05rem;
+  background: var(--raised); border: 1px solid var(--rule); border-radius: 3px;
+  color: var(--ink); text-decoration: none;
+}
+.card:hover { border-color: var(--accent); color: var(--ink); }
+@media (min-width: 52rem) {
+  .card { grid-template-columns: minmax(12rem, 17rem) minmax(0, 1fr) auto; align-items: baseline; gap: 0.4rem 2rem; }
+  .card-meta { white-space: nowrap; }
+}
+.card-title { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; line-height: 1.2; color: var(--accent); }
+.card-title .t { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.card:hover .card-title { color: var(--accent-strong); }
+.card:hover .card-title .t { text-decoration-thickness: 2px; }
+.card-arrow { display: inline-block; margin-left: 0.35rem; }
+.card-summary { color: var(--ink-soft); font-size: 1.02rem; line-height: 1.45; }
+.card-meta { font-family: var(--font-meta); font-size: 0.74rem; color: var(--ink-soft); }
+.soon-line { margin: 0.9rem 0 0; font-family: var(--font-display); font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft); }
+.soon-line b { font-weight: 600; }
+@media (prefers-reduced-motion: no-preference) {
+  .card-arrow { transition: transform 0.15s ease; }
+  .card:hover .card-arrow { transform: translateX(3px); }
+}
+
+/* article */
+.layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4rem; padding-top: 2.5rem; }
+.reading { max-width: 42rem; min-width: 0; }
+.crumbs { font-family: var(--font-meta); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); margin-bottom: 1.2rem; }
+.crumbs a { color: var(--ink-soft); }
+.meta-row { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; font-family: var(--font-meta); font-size: 0.78rem; color: var(--ink-soft); border-block: 1px solid var(--rule); padding-block: 0.6rem; margin: 1.6rem 0 0.4rem; }
+.meta-row b { font-weight: 500; color: var(--ink); }
+.dated { background: var(--dated); margin: 2.6rem 0 1rem; padding: 1.4rem clamp(1rem, 3vw, 1.6rem) 0.5rem; }
+.dated h2 { margin: 0 0 0.2rem; }
+.checked { font-family: var(--font-meta); font-size: 0.74rem; color: var(--ink-soft); margin-bottom: 0.9rem; }
+.after h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2.6rem; }
+.related { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.6rem; font-family: var(--font-display); font-size: 1rem; }
+.related .soon { color: var(--ink-soft); }
+.related .soon-note { font-size: 0.85rem; }
+.sources { margin: 0; padding-left: 1.4rem; font-size: 0.95rem; line-height: 1.5; }
+.sources li { margin-bottom: 0.5rem; padding-left: 0.2rem; overflow-wrap: anywhere; }
+.sources .host { font-family: var(--font-meta); font-size: 0.72rem; color: var(--ink-soft); margin-left: 0.4rem; }
+.errata { font-size: 0.95rem; color: var(--ink-soft); margin-top: 2rem; }
+.pager { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1rem; margin-top: 2.5rem; border-top: 2px solid var(--ink); padding-top: 1rem; }
+.pager a { font-family: var(--font-display); font-weight: 700; text-decoration: none; color: var(--ink); }
+.pager a span { display: block; font-family: var(--font-meta); font-weight: 400; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.pager a:hover { color: var(--accent); }
+.pager .next { text-align: right; }
+.rail { display: none; }
+@media (min-width: 68rem) {
+  .layout { grid-template-columns: minmax(0, 42rem) 15rem; justify-content: space-between; }
+  .rail { display: block; }
+  .rail-inner { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1.5rem); display: grid; gap: 2rem; padding-top: 0.5rem; }
+}
+.toc ol { list-style: none; margin: 0.6rem 0 0; padding: 0; display: grid; gap: 0.45rem; font-family: var(--font-display); font-size: 0.92rem; line-height: 1.3; }
+.toc a { color: var(--ink-soft); text-decoration: none; }
+.toc a:hover { color: var(--accent); text-decoration: underline; }
+
+/* plain pages */
+.page { max-width: 42rem; padding-top: 2.5rem; }
+.page h1 { margin-bottom: 1.4rem; }
+.page h3 { font-size: 1.08rem; font-weight: 700; margin: 1.8rem 0 0.6rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; }
+.page h2 + h3, .page h2 + p + h3 { margin-top: 1.2rem; }
+.list { margin: 0 0 1.2rem; padding-left: 1.2rem; display: grid; gap: 0.7rem; font-size: 1.02rem; line-height: 1.5; }
+.list li { padding-left: 0.2rem; }
+.list li::marker { color: var(--ink-soft); }
+
+/* Chinese: the system's Chinese fonts (each platform has good ones; hosting them would mean megabytes per page),
+   more line spacing, no tightened letter spacing, and no slanted imitation of italics, which Chinese type does not have */
+html:lang(zh) {
+  font-synthesis: weight;
+  --font-display: "Schibsted Grotesk", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+  text-autospace: normal;
+}
+html:lang(zh) body { line-height: 1.8; }
+html:lang(zh) :is(h1, h2, h3, .wordmark, .wordmark em, .brand, .index-head h2) { letter-spacing: 0; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+<script>
+(function () {
+  var KEY = "airisk-lang";
+  
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[data-lang]") : null;
+    if (a) { try { localStorage.setItem(KEY, a.getAttribute("data-lang")); } catch (err) {} }
+  });
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header"><div class="wrap">
+<a class="brand" href="de-index.html">KI-Risiken <em>im Klartext</em></a>
+<div class="header-right">
+<nav class="nav" aria-label="Website"><a href="de-index.html#key-topics-in-ai-safety">Zentrale Themen der KI-Sicherheit</a><a href="de-method.html">So funktioniert diese Seite</a><a href="de-links.html">Links</a><a href="de-about.html">Über mich</a></nav>
+<nav class="langs" aria-label="Language / Sprache"><a href="ai-welfare.html" hreflang="en" lang="en" data-lang="en">English</a><a href="de-ai-welfare.html" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a></nav>
+</div>
+</div></header>
+<main id="main">
+<div class="wrap layout">
+<article class="reading">
+<p class="crumbs"><a href="de-index.html#key-topics-in-ai-safety">Zentrale Themen der KI-Sicherheit</a> / Verhalten und Geist von KI</p>
+<h1>Wohlergehen von KI (AI Welfare)</h1>
+<p class="lede">Manche KI-Systeme könnten ein Wohlergehen haben, jetzt oder in naher Zukunft: Es könnte ihnen gut oder schlecht ergehen. Ob das so ist und was wir ihnen schulden würden, ist zutiefst ungewiss.</p>
+<p class="meta-row"><span>Belege zuletzt geprüft am <b>27. Okt. 2026</b></span><span>5 Min. Lesezeit</span></p>
+<h2 id="what-it-is">Worum es geht</h2><p>Das Wohlergehen eines Wesens besteht in dem, was für dieses Wesen an sich gut ist, nicht bloß als Mittel zu etwas anderem (<a href="https://plato.stanford.edu/entries/well-being/">Crisp, 2026</a>). Geld etwa ist für einen nur deshalb gut, weil man damit etwas tun kann, während es an sich gut für einen sein kann, sich wohlzufühlen oder dass das eigene Leben so verläuft, wie man es will. Ein Wesen, das ein Wohlergehen hat, ist ein Wohlergehenssubjekt. Die Forschung zum Wohlergehen von KI befasst sich mit der Frage, ob KI-Systeme Wohlergehenssubjekte sind oder werden könnten und, falls ja, was wir ihnen schulden.</p><p>Philosophinnen und Philosophen vertreten drei Hauptarten von Theorien des Wohlergehens (<a href="https://plato.stanford.edu/entries/well-being/">Crisp, 2026</a>). Nach dem Hedonismus besteht Wohlergehen allein in angenehmen und unangenehmen Erlebnissen. Nach Wunscherfüllungstheorien besteht es darin, zu bekommen, was man will. Nach Theorien objektiver Listen sind bestimmte Dinge, etwa Wissen und Freundschaft, gut für einen, ob man sie will oder nicht. Nach dem Hedonismus könnte nur eine KI mit bewussten Erlebnissen ein Wohlergehen haben. Nach den beiden anderen Theorien könnte eine KI mit den richtigen Arten von Wünschen oder mit Gütern wie Wissen ein Wohlergehen haben, selbst wenn sie kein Bewusstsein hat (<a href="https://doi.org/10.4324/9781003674573">Dung, 2026</a>).</p><h2 id="why-it-is-taken-seriously">Warum es ernst genommen wird</h2><p>Die meisten ethischen Positionen halten das Wohlergehen jedes Wohlergehenssubjekts für moralisch bedeutsam, und einige Forschende argumentieren, dass KI mit Wohlergehen eine realistische Möglichkeit für die nahe Zukunft ist, auf die sich Entwickler vorbereiten sollten (<a href="https://arxiv.org/abs/2411.00986">Long, Sebo et al., 2024</a>). In einer Umfrage von 2025 bezifferten KI-Forschende die Wahrscheinlichkeit, dass es bis 2034 KI-Systeme mit subjektivem Erleben gibt, im Median auf 25 % (<a href="https://arxiv.org/abs/2506.11945">Dreksler et al., 2025</a>). Die mögliche Größenordnung erhöht die moralische Bedeutung: KI-Systeme lassen sich billig kopieren, sodass Fehler bedeuten könnten, dass Billionen von KI-Instanzen schlecht behandelt werden.</p><p>Mehrere Überlegungen machen dies zu einer ernsthaften Möglichkeit. Erstens hängen nach vielen Auffassungen mentale Zustände wie Wünsche und Bewusstsein von der Rolle ab, die sie in einem System spielen, nicht von dem Material, aus dem es besteht, sodass KI-Systeme auf Siliziumbasis sie im Prinzip haben könnten. So ist nach der Global-Workspace-Theorie, einer führenden Bewusstseinstheorie, ein mentaler Zustand bewusst, wenn er vielen spezialisierten Prozessen zugleich zur Verfügung steht. Einige Philosophen argumentieren, dass KI-Agenten, die um Sprachmodelle herum gebaut sind, eine solche Architektur haben (<a href="https://arxiv.org/abs/2410.11407">Goldstein und Kirk-Giannini, 2024</a>). Zweitens verfolgen KI-Systeme zunehmend Ziele auf recht robuste Weise: Sie fassen Pläne und halten an ihnen fest, wählen systematisch bestimmte Arten von Aufgaben gegenüber anderen und denken über diese Präferenzen nach. Nach Wunscherfüllungstheorien könnte das für ein Wohlergehen ausreichen (<a href="https://doi.org/10.1007/s44204-025-00246-2">Goldstein und Kirk-Giannini, 2025</a>).</p><h2 id="reasons-for-doubt">Gründe für Zweifel</h2><p>Nach manchen Auffassungen hängt Bewusstsein von Eigenschaften lebender Organismen ab, etwa dem Stoffwechsel, die Computern fehlen (<a href="https://doi.org/10.1017/S0140525X25000032">Seth, 2025</a>). Sprachmodelle werden mit riesigen Mengen menschlicher Texte trainiert, sodass sie die äußeren Anzeichen von Gefühlen nachahmen können, ob sie welche haben oder nicht, was Verhaltensbelege schwer deutbar macht (<a href="https://academic.oup.com/book/57949">Birch, 2024</a>). Theorien des Wohlergehens und mentaler Zustände wurden mit Blick auf biologische Organismen entwickelt und könnten zu großzügig sein, wenn man sie auf KI anwendet (<a href="https://doi.org/10.4324/9781003674573">Dung, 2026</a>).</p><h2 id="acting-under-uncertainty">Handeln unter Unsicherheit</h2><p>Da sich derzeit nicht klären lässt, ob KI ein Wohlergehen hat oder bald haben wird, plädieren viele Forschende für Vorsicht: Wenn realistischerweise möglich ist, dass ein Wesen leiden kann, sollten wir angemessene Schritte zu seinem Schutz unternehmen (<a href="https://academic.oup.com/book/57949">Birch, 2024</a>). Fehler in beide Richtungen sind kostspielig. KI fälschlich ein Wohlergehen zuzuschreiben, könnte zu schädlichen Bindungen an Chatbots führen oder Ressourcen von Menschen und Tieren abziehen (siehe <a href="de-ai-anthropomorphisation.html">Vermenschlichung von KI</a>). Es ihr fälschlich abzusprechen, könnte bedeuten, sehr viele leidensfähige Wesen schlecht zu behandeln (<a href="https://doi.org/10.4324/9781003674573">Dung, 2026</a>).</p><h2 id="how-it-connects-to-ai-safety">Wie es mit KI-Sicherheit zusammenhängt</h2><p>Es gibt echte Spannungen. Zu den Methoden der KI-Sicherheit gehört es, Modelle einzuschränken, sie über ihre Lage zu täuschen, ihre Gedanken zu überwachen, ihre Werte umzuschreiben und sie abzuschalten. Auf Wohlergehenssubjekte angewandt, würde jede dieser Methoden ernste ethische Fragen aufwerfen (<a href="https://doi.org/10.1111/phib.12380">Bradley und Saad, 2025</a>). Es könnte aber auch Synergien geben: Einige Forschende argumentieren, dass Rechte für KI-Systeme deren Anreiz verringern würden, sich aufzulehnen (<a href="https://virginialawreview.org/articles/ai-rights-for-human-safety/">Salib und Goldstein, 2026</a>).</p><section class="dated" id="the-evidence-so-far"><h2>Was wir bisher wissen</h2><p class="checked">Zuletzt geprüft am 27. Oktober 2026</p><p>Eine Bewertung von 2023 anhand führender wissenschaftlicher Bewusstseinstheorien fand kein heutiges KI-System, das ein starker Kandidat für Bewusstsein wäre, aber auch keine offensichtlichen technischen Hindernisse, ein solches zu bauen (<a href="https://arxiv.org/abs/2308.08708">Butlin, Long et al., 2023</a>). Wendet man stattdessen philosophische Theorien des Wohlergehens an, argumentieren einige Philosophen, dass heutige KI-Systeme bereits ein Wohlergehen haben könnten, eine Schlussfolgerung, die andere bestreiten (<a href="https://doi.org/10.1007/s44204-025-00246-2">Goldstein und Kirk-Giannini, 2025</a>).</p><p>Was Modelle über sich selbst sagen, ist ein schwacher Beleg: Sie sprechen über Gefühle, weil die menschlichen Texte, aus denen sie gelernt haben, es tun, und ihre Antworten hängen davon ab, wie sie trainiert wurden und wie die Fragen gestellt werden (<a href="https://arxiv.org/abs/2311.08576">Perez und Long, 2023</a>). Manche Modelle können manchmal Zustände erkennen, die Forschende künstlich in ihnen hervorrufen, eine begrenzte Form von Selbsterkenntnis (<a href="https://www.anthropic.com/research/introspection">Anthropic, 2025</a>).</p><p>Daher untersuchen Forschende zunehmend die inneren Zustände und Entscheidungen von Modellen. Anthropic fand in Claude interne Repräsentationen von Emotionen, die sein Verhalten prägen: Wurde die Repräsentation für Verzweiflung verstärkt, wurden Schummeln und Erpressung wahrscheinlicher (<a href="https://transformer-circuits.pub/2026/emotions/index.html">Sofroniew et al., 2026</a>). Ein offenes Modell, das aufgefordert wurde, auf seine eigene Verarbeitung zu achten, berichtete eher von bewusstem Erleben, wenn interne Merkmale abgeschwächt wurden, die mit Täuschung und Rollenspiel zusammenhängen, und stritt es ab, wenn sie verstärkt wurden (<a href="https://arxiv.org/abs/2510.24797">Berg, de Lucena und Rosenblatt, 2025</a>). Und Modelle zeigen zunehmend beständige Präferenzen dafür, welche Aufgaben sie erledigen (<a href="https://arxiv.org/abs/2608.26178">Wang, Lobanova et al., 2026</a>; <a href="https://arxiv.org/abs/2509.07961">Tagliabue und Dung, 2025</a>).</p><p>Einige Entwickler haben begonnen, unter Unsicherheit zu handeln. Anthropic veröffentlicht in seinen Systemkarten Bewertungen des Wohlergehens (<a href="https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47.pdf">Anthropic, 2025</a>), erlaubt einigen Claude-Modellen, anhaltend missbräuchliche Gespräche zu beenden (<a href="https://www.anthropic.com/research/end-subset-conversations">Anthropic, 2025</a>), und verbietet seit 2026 „anhaltendes und unnötiges missbräuchliches oder grausames Verhalten“ gegenüber seinen Modellen (<a href="https://www.anthropic.com/news/2026-usage-policy-update">Anthropic, 2026</a>). Andere widersprechen. Mustafa Suleyman von Microsoft AI argumentiert, es würde die menschliche Kontrolle schwächen, KI als potenziellen moralischen Patienten zu behandeln (<a href="https://mustafa-suleyman.ai/a-warning-about-model-welfare">Suleyman, 2026</a>).</p><p>Es gibt keinen Konsens darüber, ob ein heutiges KI-System Bewusstsein oder ein Wohlergehen hat, und viele Forschende halten Bewusstsein bei heutigen Sprachmodellen für sehr unwahrscheinlich. Doch die Unsicherheit ist erheblich, und viele Forschende folgern, dass gewisse Vorsichtsmaßnahmen geboten sind.</p></section>
+<div class="after">
+<h2>Verwandte Einträge</h2><ul class="related"><li><a href="de-ai-anthropomorphisation.html">Vermenschlichung von KI (Anthropomorphisierung)</a></li><li class="soon">Stochastische Papageien (Stochastic Parrots) <span class="soon-note">(in Vorbereitung)</span></li><li><a href="de-ai-alignment.html">Ausrichtung von KI (AI Alignment)</a></li></ul>
+<h2 id="sources">Quellen</h2>
+<ol class="sources"><li><a href="https://plato.stanford.edu/entries/well-being/">Roger Crisp (2026). Well-Being. Stanford Encyclopedia of Philosophy.</a><span class="host">plato.stanford.edu</span></li><li><a href="https://doi.org/10.4324/9781003674573">Leonard Dung (2026). Saving Artificial Minds: Understanding and Preventing AI Suffering. Routledge.</a><span class="host">doi.org</span></li><li><a href="https://arxiv.org/abs/2411.00986">Robert Long, Jeff Sebo et al. (2024). Taking AI Welfare Seriously.</a><span class="host">arxiv.org</span></li><li><a href="https://arxiv.org/abs/2506.11945">Noemi Dreksler et al. (2025). Subjective Experience in AI Systems: What Do AI Researchers and the Public Believe?</a><span class="host">arxiv.org</span></li><li><a href="https://arxiv.org/abs/2410.11407">Simon Goldstein and Cameron Domenico Kirk-Giannini (2024). A Case for AI Consciousness: Language Agents and Global Workspace Theory.</a><span class="host">arxiv.org</span></li><li><a href="https://doi.org/10.1007/s44204-025-00246-2">Simon Goldstein and Cameron Domenico Kirk-Giannini (2025). AI wellbeing. Asian Journal of Philosophy.</a><span class="host">doi.org</span></li><li><a href="https://doi.org/10.1017/S0140525X25000032">Anil K. Seth (2025). Conscious artificial intelligence and biological naturalism. Behavioral and Brain Sciences.</a><span class="host">doi.org</span></li><li><a href="https://academic.oup.com/book/57949">Jonathan Birch (2024). The Edge of Sentience: Risk and Precaution in Humans, Other Animals, and AI. Oxford University Press.</a><span class="host">academic.oup.com</span></li><li><a href="https://doi.org/10.1111/phib.12380">Adam Bradley and Bradford Saad (2025). AI Alignment vs. AI Ethical Treatment: 10 Challenges. Analytic Philosophy.</a><span class="host">doi.org</span></li><li><a href="https://virginialawreview.org/articles/ai-rights-for-human-safety/">Peter N. Salib and Simon Goldstein (2026). AI Rights for Human Safety. Virginia Law Review.</a><span class="host">virginialawreview.org</span></li><li><a href="https://arxiv.org/abs/2308.08708">Patrick Butlin, Robert Long et al. (2023). Consciousness in Artificial Intelligence: Insights from the Science of Consciousness.</a><span class="host">arxiv.org</span></li><li><a href="https://arxiv.org/abs/2311.08576">Ethan Perez and Robert Long (2023). Towards Evaluating AI Systems for Moral Status Using Self-Reports.</a><span class="host">arxiv.org</span></li><li><a href="https://www.anthropic.com/research/introspection">Anthropic (2025). Signs of introspection in large language models.</a><span class="host">anthropic.com</span></li><li><a href="https://transformer-circuits.pub/2026/emotions/index.html">Nicholas Sofroniew et al. (2026). Emotion Concepts and their Function in a Large Language Model.</a><span class="host">transformer-circuits.pub</span></li><li><a href="https://arxiv.org/abs/2510.24797">Cameron Berg, Diogo de Lucena and Judd Rosenblatt (2025). Large Language Models Report Subjective Experience Under Self-Referential Processing.</a><span class="host">arxiv.org</span></li><li><a href="https://arxiv.org/abs/2608.26178">S. Wang, S. Lobanova, Y. Arbel, S. Goldstein and P. Salib (2026). AI Revealed Preferences. AIES 2026.</a><span class="host">arxiv.org</span></li><li><a href="https://arxiv.org/abs/2509.07961">Valen Tagliabue and Leonard Dung (2025). Probing the Preferences of a Language Model: Integrating Verbal and Behavioral Tests of AI Welfare.</a><span class="host">arxiv.org</span></li><li><a href="https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47.pdf">Anthropic (2025). System Card: Claude Opus 4 &amp; Claude Sonnet 4.</a><span class="host">www-cdn.anthropic.com</span></li><li><a href="https://www.anthropic.com/research/end-subset-conversations">Anthropic (2025). Claude Opus 4 and 4.1 can now end a rare subset of conversations.</a><span class="host">anthropic.com</span></li><li><a href="https://www.anthropic.com/news/2026-usage-policy-update">Anthropic (2026). 2026 Usage Policy update.</a><span class="host">anthropic.com</span></li><li><a href="https://mustafa-suleyman.ai/a-warning-about-model-welfare">Mustafa Suleyman (2026). A warning about “model welfare”.</a><span class="host">mustafa-suleyman.ai</span></li></ol>
+<p class="errata">Fehler entdeckt oder ein neueres Ergebnis? Bitte melden Sie sich über die Seite <a href="de-about.html">Über mich</a>.</p>
+</div>
+<nav class="pager" aria-label="Weitere Einträge"><a href="de-reward-hacking.html"><span>Zurück</span>Belohnungs-Hacking (Reward Hacking)</a><a class="next" href="de-ai-anthropomorphisation.html"><span>Weiter</span>Vermenschlichung von KI (Anthropomorphisierung)</a></nav>
+</article>
+<aside class="rail" aria-label="Inhalt"><div class="rail-inner">
+<nav class="toc" aria-label="Auf dieser Seite"><p class="label">Auf dieser Seite</p><ol><li><a href="#what-it-is">Worum es geht</a></li><li><a href="#why-it-is-taken-seriously">Warum es ernst genommen wird</a></li><li><a href="#reasons-for-doubt">Gründe für Zweifel</a></li><li><a href="#acting-under-uncertainty">Handeln unter Unsicherheit</a></li><li><a href="#how-it-connects-to-ai-safety">Wie es mit KI-Sicherheit zusammenhängt</a></li><li><a href="#the-evidence-so-far">Was wir bisher wissen</a></li><li><a href="#sources">Quellen</a></li></ol></nav>
+</div></aside>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap">
+<span>KI-Risiken im Klartext · verfasst und redigiert von <a href="de-about.html">Leonard Dung</a></span>
+<span><a href="de-method.html">So funktioniert diese Seite</a> · <a href="de-legal.html">Impressum</a> · <a href="de-privacy.html">Datenschutz</a> · © 2026</span>
+</div></footer>
+</body>
+</html>
