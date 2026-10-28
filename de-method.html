@@ -335,6 +335,17 @@ p { margin: 0 0 1.05em; }
 .list { margin: 0 0 1.2rem; padding-left: 1.2rem; display: grid; gap: 0.7rem; font-size: 1.02rem; line-height: 1.5; }
 .list li { padding-left: 0.2rem; }
 .list li::marker { color: var(--ink-soft); }
+
+/* Chinese: the system's Chinese fonts (each platform has good ones; hosting them would mean megabytes per page),
+   more line spacing, no tightened letter spacing, and no slanted imitation of italics, which Chinese type does not have */
+html:lang(zh) {
+  font-synthesis: weight;
+  --font-display: "Schibsted Grotesk", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+  text-autospace: normal;
+}
+html:lang(zh) body { line-height: 1.8; }
+html:lang(zh) :is(h1, h2, h3, .wordmark, .wordmark em, .brand, .index-head h2) { letter-spacing: 0; }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 </style>
@@ -355,12 +366,12 @@ p { margin: 0 0 1.05em; }
 <header class="site-header"><div class="wrap">
 <a class="brand" href="de-index.html">KI-Risiken <em>im Klartext</em></a>
 <div class="header-right">
-<nav class="nav" aria-label="Website"><a href="de-index.html#zentrale-themen-der-ki-sicherheit">Zentrale Themen der KI-Sicherheit</a><a href="de-method.html" aria-current="page">So funktioniert diese Seite</a><a href="de-links.html">Links</a><a href="de-about.html">Über mich</a></nav>
+<nav class="nav" aria-label="Website"><a href="de-index.html#key-topics-in-ai-safety">Zentrale Themen der KI-Sicherheit</a><a href="de-method.html" aria-current="page">So funktioniert diese Seite</a><a href="de-links.html">Links</a><a href="de-about.html">Über mich</a></nav>
 <nav class="langs" aria-label="Language / Sprache"><a href="method.html" hreflang="en" lang="en" data-lang="en">English</a><a href="de-method.html" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a></nav>
 </div>
 </div></header>
 <main id="main">
-<div class="wrap"><article class="page"><h1>So funktioniert diese Seite</h1><h2 id="wozu-diese-seite-da-ist">Wozu diese Seite da ist</h2><p>Diese Seite erklärt zentrale Ideen der KI-Sicherheit knapp und verständlich für Leserinnen und Leser ohne technischen Hintergrund. Ziel ist, Ihnen zu helfen, die Argumente selbst zu beurteilen, nicht, Sie von einem bestimmten Maß an Besorgnis zu überzeugen.</p><h2 id="wie-die-beitraege-aufgebaut-sind">Wie die Beiträge aufgebaut sind</h2><p>Die meisten Beiträge haben dieselben Teile. „Worum es geht“ erklärt die Idee. „Warum das wichtig ist“ beschreibt ihre Rolle in Argumenten über KI-Risiken. „Was wir bisher wissen“ berichtet, was die Forschung tatsächlich herausgefunden hat.</p><h2 id="massstaebe-fuer-belege">Maßstäbe für Belege</h2><p>Aussagen sind mit ihren Quellen verlinkt, und wo immer möglich werden Primärquellen (Fachaufsätze, Systemkarten, offizielle Dokumente) verwendet. Jeder Beitrag trennt, was belegt ist, von dem, was umstritten oder noch offen ist, und berichtet Belege gegen eine Sorge ebenso sorgfältig wie Belege dafür. Die meisten Quellen sind auf Englisch.</p><h2 id="auf-dem-neuesten-stand-bleiben">Auf dem neuesten Stand bleiben</h2><p>Die KI-Forschung entwickelt sich schnell, daher werden die Abschnitte „Was wir bisher wissen“ veralten. Ich werde versuchen, sie konsequent zu aktualisieren, wenn wichtige neue Ergebnisse erscheinen, und jede Seite zeigt, wann ihre Belege zuletzt geprüft wurden.</p><h2 id="korrekturen-und-ki-unterstuetzung">Korrekturen und KI-Unterstützung</h2><p>Wenn Ihnen ein Fehler auffällt, melden Sie sich bitte über die Seite „Über mich“. Ich nutze KI-Werkzeuge bei der Vorbereitung von Entwürfen, aber jeder Beitrag wird vor der Veröffentlichung von mir gründlich überarbeitet und sorgfältig geprüft. Die deutsche Fassung wird mit Hilfe von KI aus dem Englischen übersetzt; im Zweifel ist die englische Fassung maßgeblich.</p></article></div>
+<div class="wrap"><article class="page"><h1>So funktioniert diese Seite</h1><h2 id="what-it-is-for">Wozu diese Seite da ist</h2><p>Diese Seite erklärt zentrale Ideen der KI-Sicherheit knapp und verständlich für Leserinnen und Leser ohne technischen Hintergrund. Ziel ist, Ihnen zu helfen, die Argumente selbst zu beurteilen, nicht, Sie von einem bestimmten Maß an Besorgnis zu überzeugen.</p><h2 id="how-each-explainer-is-built">Wie die Beiträge aufgebaut sind</h2><p>Die meisten Beiträge haben dieselben Teile. „Worum es geht“ erklärt die Idee. „Warum das wichtig ist“ beschreibt ihre Rolle in Argumenten über KI-Risiken. „Was wir bisher wissen“ berichtet, was die Forschung tatsächlich herausgefunden hat.</p><h2 id="standards-of-evidence">Maßstäbe für Belege</h2><p>Aussagen sind mit ihren Quellen verlinkt, und wo immer möglich werden Primärquellen (Fachaufsätze, Systemkarten, offizielle Dokumente) verwendet. Jeder Beitrag trennt, was belegt ist, von dem, was umstritten oder noch offen ist, und berichtet Belege gegen eine Sorge ebenso sorgfältig wie Belege dafür. Die meisten Quellen sind auf Englisch.</p><h2 id="keeping-it-current">Auf dem neuesten Stand bleiben</h2><p>Die KI-Forschung entwickelt sich schnell, daher werden die Abschnitte „Was wir bisher wissen“ veralten. Ich werde versuchen, sie konsequent zu aktualisieren, wenn wichtige neue Ergebnisse erscheinen, und jede Seite zeigt, wann ihre Belege zuletzt geprüft wurden.</p><h2 id="corrections-and-ai-assistance">Korrekturen und KI-Unterstützung</h2><p>Wenn Ihnen ein Fehler auffällt, melden Sie sich bitte über die Seite „Über mich“. Ich nutze KI-Werkzeuge bei der Vorbereitung von Entwürfen, aber jeder Beitrag wird vor der Veröffentlichung von mir gründlich überarbeitet und sorgfältig geprüft. Die deutsche Fassung wird mit Hilfe von KI aus dem Englischen übersetzt; im Zweifel ist die englische Fassung maßgeblich.</p></article></div>
 </main>
 <footer class="site-footer"><div class="wrap">
 <span>KI-Risiken im Klartext · verfasst und redigiert von <a href="de-about.html">Leonard Dung</a></span>

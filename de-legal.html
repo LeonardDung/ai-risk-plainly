@@ -335,6 +335,17 @@ p { margin: 0 0 1.05em; }
 .list { margin: 0 0 1.2rem; padding-left: 1.2rem; display: grid; gap: 0.7rem; font-size: 1.02rem; line-height: 1.5; }
 .list li { padding-left: 0.2rem; }
 .list li::marker { color: var(--ink-soft); }
+
+/* Chinese: the system's Chinese fonts (each platform has good ones; hosting them would mean megabytes per page),
+   more line spacing, no tightened letter spacing, and no slanted imitation of italics, which Chinese type does not have */
+html:lang(zh) {
+  font-synthesis: weight;
+  --font-display: "Schibsted Grotesk", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+  text-autospace: normal;
+}
+html:lang(zh) body { line-height: 1.8; }
+html:lang(zh) :is(h1, h2, h3, .wordmark, .wordmark em, .brand, .index-head h2) { letter-spacing: 0; }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 </style>
@@ -355,12 +366,12 @@ p { margin: 0 0 1.05em; }
 <header class="site-header"><div class="wrap">
 <a class="brand" href="de-index.html">KI-Risiken <em>im Klartext</em></a>
 <div class="header-right">
-<nav class="nav" aria-label="Website"><a href="de-index.html#zentrale-themen-der-ki-sicherheit">Zentrale Themen der KI-Sicherheit</a><a href="de-method.html">So funktioniert diese Seite</a><a href="de-links.html">Links</a><a href="de-about.html">Über mich</a></nav>
+<nav class="nav" aria-label="Website"><a href="de-index.html#key-topics-in-ai-safety">Zentrale Themen der KI-Sicherheit</a><a href="de-method.html">So funktioniert diese Seite</a><a href="de-links.html">Links</a><a href="de-about.html">Über mich</a></nav>
 <nav class="langs" aria-label="Language / Sprache"><a href="legal.html" hreflang="en" lang="en" data-lang="en">English</a><a href="de-legal.html" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a></nav>
 </div>
 </div></header>
 <main id="main">
-<div class="wrap"><article class="page"><h1>Impressum</h1><p>Angaben gemäß § 5 DDG und § 18 MStV:</p><p>Leonard Dung</p><p>E-Mail: leonard.dung[at]rub.de</p><h2 id="verantwortlich-fuer-den-inhalt">Verantwortlich für den Inhalt</h2><p>Leonard Dung (§ 18 Abs. 2 MStV).</p><h2 id="links-auf-andere-websites">Links auf andere Websites</h2><p>Diese Seite verlinkt auf viele externe Quellen. Ich prüfe sie, wenn ich sie aufnehme, habe aber keinen Einfluss auf ihre Inhalte und bin für diese nicht verantwortlich.</p></article></div>
+<div class="wrap"><article class="page"><h1>Impressum</h1><p>Angaben gemäß § 5 DDG und § 18 MStV:</p><p>Leonard Dung</p><p>E-Mail: leonard.dung[at]rub.de</p><h2 id="responsible-for-the-content">Verantwortlich für den Inhalt</h2><p>Leonard Dung (§ 18 Abs. 2 MStV).</p><h2 id="links-to-other-websites">Links auf andere Websites</h2><p>Diese Seite verlinkt auf viele externe Quellen. Ich prüfe sie, wenn ich sie aufnehme, habe aber keinen Einfluss auf ihre Inhalte und bin für diese nicht verantwortlich.</p></article></div>
 </main>
 <footer class="site-footer"><div class="wrap">
 <span>KI-Risiken im Klartext · verfasst und redigiert von <a href="de-about.html">Leonard Dung</a></span>
